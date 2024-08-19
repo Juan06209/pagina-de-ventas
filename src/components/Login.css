@@ -1,0 +1,38 @@
+.login-container {
+    min-height: 100vh;
+    background: url('/public/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Tipografía para el título */
+    color: #333; /* Color del texto */
+}
+
+.volver-btn {
+    color: #000; /* Letras negras */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold;
+    background: transparent; /* Fondo transparente para el botón */
+    border: none; /* Sin borde */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+.volver-btn:hover {
+    background-color: #000; /* Fondo negro al hacer hover */
+    color: #fff; /* Letras blancas al hacer hover */
+}
+
+@media (max-width: 576px) {
+    .login-form {
+        padding: 2rem;
+    }
+}

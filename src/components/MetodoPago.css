@@ -1,0 +1,75 @@
+.metodo-pago-background {
+    background-image: url('/public/fondo.jpg'); /* Ajusta la ruta según la ubicación de la imagen */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Elimina el margen superior que podría estar causando el espacio blanco */
+}
+
+.metodo-pago-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con opacidad */
+    border-radius: 8px;
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra sutil */
+    overflow: hidden;
+}
+
+.metodo-pago-container h2 {
+    color: #070707; /* Color del título */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.metodo-pago-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.metodo-pago-table th, .metodo-pago-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.metodo-pago-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.metodo-pago-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.metodo-pago-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    margin-bottom: 0; /* Elimina el margen inferior para evitar el espacio blanco */
+    border-bottom: none; /* Elimina cualquier borde blanco debajo de la barra */
+    background-color: #000; /* Fondo negro para la barra de navegación */
+}
+
+.navbar-brand {
+    color: #fff !important; /* Color blanco para el nombre de la tienda */
+}
+
+.btn-light {
+    color: #fff; /* Color del texto del botón */
+    background-color: #000; /* Fondo negro del botón */
+    border: 1px solid #000; /* Borde negro del botón */
+}
+
+.btn-light:hover {
+    background-color: #202020;
+    color:#f4f4f4 /* Fondo negro más oscuro al pasar el ratón */
+}
+

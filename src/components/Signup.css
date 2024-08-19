@@ -1,0 +1,42 @@
+.signup-container {
+    min-height: 100vh;
+    background: url('/public/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Para la colocación del botón */
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Tipografía para el título */
+    color: #333; /* Color del texto */
+}
+
+.btn-link.volver-btn {
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-link.volver-btn:hover {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
