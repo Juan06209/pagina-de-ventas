@@ -1,9 +1,17 @@
+html {
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+
 .home-background {
-    background-image: url('/public/fondo.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-image: url('/public/fondo.jpg'); 
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
-    padding-bottom: 10rem; /* Espacio para el footer */
+    min-height: 100vh; 
+    padding-bottom: 5rem; 
 }
 
 .navbar-nav {
@@ -11,27 +19,30 @@
 }
 
 .nav-link {
-    color: white !important; /* Asegura que los enlaces sean blancos */
+    color: white !important;
 }
 
 .nav-item {
-    margin-right: 1rem; /* Ajusta el margen derecho para los enlaces */
+    margin-right: 1rem; 
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad para mejorar la legibilidad del texto */
-    padding: 2rem;
-    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 2rem; 
+    border-radius: 0.5rem; 
+    margin: 0 auto; 
+    width: 90%; 
+    max-width: 800px; 
 }
 
-/* Estilos para el botón del menú hamburguesa */
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16m-7 6h7'%3E%3C/path%3E%3C/svg%3E");
 }
 
 @media (max-width: 991px) {
     .navbar-nav {
-        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+        margin-left: 0; 
     }
 }
 
@@ -62,12 +73,12 @@
     }
 }
 
-/* Estilos para el footer */
+
 .footer {
     padding: 2rem 0;
-    background-color: #343a40; /* Fondo oscuro */
-    color: #f8f9fa; /* Texto claro */
-    position: relative; /* Permite el uso de position: absolute en los hijos si es necesario */
+    background-color: #343a40; 
+    color: #f8f9fa; 
+    position: relative; 
     bottom: 0;
     width: 100%;
 }
@@ -79,7 +90,7 @@
 }
 
 .footer-link {
-    color: #f8f9fa; /* Color blanco para los enlaces */
+    color: #f8f9fa; 
     text-decoration: none;
 }
 
@@ -89,4 +100,14 @@
 
 .footer p {
     margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem; 
+        width: 95%; 
+    }
+    .footer {
+        padding: 1rem 0; 
+    }
 }

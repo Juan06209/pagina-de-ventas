@@ -8,7 +8,7 @@
 }
 
 .promociones-container {
-    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco semitransparente */
+    background-color: rgba(255, 255, 255, 0.4); 
     border-radius: 8px;
     padding: 20px;
     max-width: 800px;
@@ -17,50 +17,50 @@
 }
 
 .promociones-container h2 {
-    color: #000000; /* Color del título */
+    color: #000000; 
     margin-bottom: 20px;
 }
 
 .volver-btn {
-    color: #000; /* Letras negras */
-    text-decoration: none; /* Sin subrayado */
+    color: #000; 
+    text-decoration: none; 
     font-weight: bold;
-    background: transparent; /* Fondo transparente para el botón */
-    border: none; /* Sin borde */
-    font-size: 1rem; /* Tamaño de fuente */
+    background: transparent; 
+    border: none; 
+    font-size: 1rem; 
 }
 
 .volver-btn:hover {
-    background-color: #000; /* Fondo negro al hacer hover */
-    color: #fff; /* Letras blancas al hacer hover */
+    background-color: #000; 
+    color: #fff; 
 }
 
-/* Estilos para la tabla */
+
 .table-dark {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Letras blancas */
+    background-color: #333; 
+    color: #fff; 
 }
 
 .table-dark thead th {
-    background-color: #444; /* Fondo más oscuro para el encabezado */
-    color: #fff; /* Letras blancas en el encabezado */
+    background-color: #444; 
+    color: #fff; 
 }
 
 .table-dark tbody tr {
-    border-bottom: 1px solid #555; /* Línea separadora en el cuerpo de la tabla */
+    border-bottom: 1px solid #555; 
 }
 
 .table-dark tbody tr:nth-child(even) {
-    background-color: #444; /* Fondo alternado para filas pares */
+    background-color: #444; 
 }
 
 .table-dark tbody tr:nth-child(odd) {
-    background-color: #333; /* Fondo alternado para filas impares */
+    background-color: #333; 
 }
 
 .table-dark td, .table-dark th {
-    padding: 1rem; /* Espaciado en las celdas */
-    text-align: center; /* Alinear texto al centro */
+    padding: 1rem; 
+    text-align: center; 
 }
 
 @media (max-width: 576px) {

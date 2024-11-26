@@ -5,30 +5,31 @@
 }
 
 .login-form {
-    background-color: rgba(255, 255, 255, 0.4); /* Fondo blanco con 40% de opacidad */
+    background-color: rgba(255, 255, 255, 0.4); 
     max-width: 400px;
     width: 100%;
     padding: 20px;
     border-radius: 8px;
+    
 }
 
 h2 {
-    font-family: 'Arial', sans-serif; /* Tipografía para el título */
-    color: #333; /* Color del texto */
+    font-family: 'Arial', sans-serif; 
+    color: #070707; 
 }
 
 .volver-btn {
-    color: #000; /* Letras negras */
-    text-decoration: none; /* Sin subrayado */
+    color: #000; 
+    text-decoration: none; 
     font-weight: bold;
-    background: transparent; /* Fondo transparente para el botón */
-    border: none; /* Sin borde */
-    font-size: 1rem; /* Tamaño de fuente */
+    background: transparent;
+    border: none; 
+    font-size: 1rem; 
 }
 
 .volver-btn:hover {
-    background-color: #000; /* Fondo negro al hacer hover */
-    color: #fff; /* Letras blancas al hacer hover */
+    background-color: #000; 
+    color: #fff; 
 }
 
 @media (max-width: 576px) {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css'; // Importa el archivo CSS si lo necesitas
+import './Login.css'; 
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -13,22 +13,27 @@ function Login() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const loginData = {
-            nombre,
-            contraseña
-        };
+        if (nombre === 'Admin' && contraseña === 'Admin11991') {
+            // Redirigir a la página de administrador si las credenciales son las del admin
+            navigate('/homeadmin');
+        } else {
+            const loginData = {
+                nombre,
+                contraseña
+            };
 
-        axios.post('http://localhost:8080/Avanfitt/login', loginData)
-            .then(response => {
-                if (response.status === 200) {
-                    console.log('Login exitoso:', response.data);
-                    navigate('/'); // Redirige a la página de inicio
-                }
-            })
-            .catch(error => {
-                console.error('Hubo un error en el login:', error);
-                setErrorMessage('Nombre o contraseña inválidos.'); // Mensaje de error
-            });
+            axios.post('http://localhost:8080/Avanfitt/login', loginData)
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log('Login exitoso:', response.data);
+                        navigate('/catalogo'); // Redirige a la página del catálogo
+                    }
+                })
+                .catch(error => {
+                    console.error('Hubo un error en el login:', error);
+                    setErrorMessage('Nombre o contraseña inválidos.'); // Mensaje de error
+                });
+        }
     };
 
     return (

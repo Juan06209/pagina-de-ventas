@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './MetodoPago.css'; // Importa el archivo CSS aquí
+import './MetodoPago.css'; 
 import { Link } from 'react-router-dom';
 
 function MetodoPago() {

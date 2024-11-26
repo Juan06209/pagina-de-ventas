@@ -10,9 +10,26 @@ function Signup() {
     const [direccion, setDireccion] = useState('');
     const [tel, setTel] = useState('');
     const [cc, setCc] = useState('');
-    const [successMessage, setSuccessMessage] = useState(''); // Estado para mensaje de éxito
-    const [errorMessage, setErrorMessage] = useState(''); // Estado para mensaje de error
+    const [successMessage, setSuccessMessage] = useState(''); 
+    const [errorMessage, setErrorMessage] = useState(''); 
+    const [inputError, setInputError] = useState(''); 
     const navigate = useNavigate(); // Hook para redirección
+
+    // Función para validar solo números en los campos de Cédula y Teléfono
+    const handleNumberInput = (e, setState) => {
+        const value = e.target.value;
+        if (/^\d*$/.test(value)) { // Expresión regular para validar solo números
+            setState(value);
+            setInputError(''); // Limpiar mensaje de error si la entrada es válida
+        } else {
+            setInputError('No puedes ingresar ese tipo de caracteres. Solo se permiten números.'); // Mostrar mensaje de error
+            
+            // Desaparecer el mensaje de error después de 5 segundos
+            setTimeout(() => {
+                setInputError('');
+            }, 5000);
+        }
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -36,7 +53,7 @@ function Signup() {
                 console.log('Registro exitoso:', response.data);
                 setSuccessMessage('Registro realizado con éxito'); // Mensaje de éxito
                 setTimeout(() => {
-                    navigate('/'); // Redirigir a la página de inicio después de 2 segundos
+                    navigate('/catalogo'); // Redirigir a la página de inicio después de 2 segundos
                 }, 2000);
             })
             .catch(error => {
@@ -90,7 +107,7 @@ function Signup() {
                             type="text"
                             className="form-control"
                             value={tel}
-                            onChange={(e) => setTel(e.target.value)}
+                            onChange={(e) => handleNumberInput(e, setTel)} // Validar solo números
                         />
                     </div>
                     <div className="form-group mb-4">
@@ -100,11 +117,12 @@ function Signup() {
                             type="text"
                             className="form-control"
                             value={cc}
-                            onChange={(e) => setCc(e.target.value)}
+                            onChange={(e) => handleNumberInput(e, setCc)} // Validar solo números
                         />
                     </div>
                     <button type="submit" className="btn btn-dark w-100">Registrarse</button>
                 </form>
+                {inputError && <div className="alert alert-danger mt-3">{inputError}</div>}
                 {successMessage && <div className="alert alert-success mt-3">{successMessage}</div>}
                 {errorMessage && <div className="alert alert-danger mt-3">{errorMessage}</div>}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Promociones.css'; // Asegúrate de tener este archivo CSS para aplicar el fondo
+import './Promociones.css'; 
 import { useNavigate } from 'react-router-dom';
 
 function Promociones() {
@@ -38,7 +38,7 @@ function Promociones() {
         <div className="promociones-background">
             <div className="container mt-5 promociones-container">
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                    <button className="btn btn-link volver-btn" onClick={() => navigate('/')}>Volver al Inicio</button>
+                    <button className="btn btn-link volver-btn" onClick={() => navigate('/catalogo')}>Volver al catálogo</button>
                     <h2 className="text-center m-0">Promociones Disponibles</h2>
                 </div>
                 {promociones.length > 0 ? (

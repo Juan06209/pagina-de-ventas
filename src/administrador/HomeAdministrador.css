@@ -1,0 +1,28 @@
+
+
+.navbar {
+    height: 60px; 
+}
+
+.navbar-brand {
+    font-size: 1.5rem; 
+}
+
+.nav-link {
+    margin-left: 15px; 
+}
+
+.container {
+    max-width: 800px; 
+    margin: auto; 
+    
+}
+
+.bg-dark {
+    background-color: #343a40 !important; 
+    
+}
+
+h2 {
+    color: white; 
+}
